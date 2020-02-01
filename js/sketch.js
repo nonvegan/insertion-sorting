@@ -43,23 +43,22 @@ function draw() {
         ctx.fillStyle = hsvToRgb(mapValue(array[x], 0, width, -30, 300), 100, 100).hex()
         ctx.fillRect(x * scale, height - array[x], scale / 2, array[x])
     }
-    bubbleSort()
+    insertionSort()
 }
 
-let gI = 0
-let gJ = 0
+let gI = 1
 
-function bubbleSort() {
-    if (gI < array.length - 1) {
-        if (gJ < array.length - gI - 1) {
-            if (array[gJ] > array[gJ + 1]) {
-                swap(gJ, gJ + 1, array)
-            }
-            gJ++
-        } else {
-            gJ = 0
-            gI++
+function insertionSort() {
+    let gJ = gI - 1
+    let key = array[gI]
+    if (gI < array.length) {
+        while (gJ >= 0 && array[gJ] > key) {
+            array[gJ + 1] = array[gJ]
+            gJ--
         }
+        gI++
+        array[gJ + 1] = key
+
     }
 }
 
@@ -92,4 +91,4 @@ setup()
 setInterval(() => {
     clear()
     draw()
-}, getMs(600));
+}, getMs(60));
