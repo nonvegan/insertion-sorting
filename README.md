@@ -1,4 +1,3 @@
 # Bubble Sort
-[Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
+[Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 
-[![Bubble sort gif](/bubble.gif)](https://nonvegan.github.io/bubble-sorting)
