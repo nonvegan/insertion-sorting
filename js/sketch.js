@@ -6,7 +6,6 @@ const range = document.createElement('input')
 const rangeLabel = document.createElement('label')
 const width = window.screen.height / 2
 const height = window.screen.height / 2
-const center = new Vector(width / 2, height / 2)
 let array = []
 let scale = 5
 
@@ -27,7 +26,7 @@ function setup() {
     divRanges.appendChild(button)
     canvas.width = width
     canvas.height = height
-    ctx.fillStyle = Color.WHITE.hex()
+    ctx.fillStyle = "white"
     for (let x = 0; x < (width / scale); x++) {
         array[x] = height / (width / scale) * x
     }
@@ -91,4 +90,4 @@ setup()
 setInterval(() => {
     clear()
     draw()
-}, getMs(60));
+}, getMs(30));
