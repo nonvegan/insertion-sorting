@@ -7,5 +7,4 @@ class Color {
     hex() {
         return rgbToHex(this.r, this.g, this.b)
     }
-    
 }
